@@ -1,6 +1,6 @@
 {
   "name": "搜索-多表多值查询并分页",
   "tagline": "我的技术分享站-EllisRan",
-  "body": "## 多表多值查询并分页\r\n\r\n在程序中，经常需要接触条件搜索分页内容，分享几个查询分页方法。 \r\n\r\n单表单值分页查询：\r\n\r\nselect * from XXX where XX=xx limit X,X;\r\n\r\n单表多值分页查询：\r\n\r\nselect * from XXX where AA=aa and BB=bb ... limit X,X;\r\n\r\n多表多值分页查询：\r\n\r\nselect a1.* from XXX as a1 left join XXX as a2 on a1.XX=a2.XX left join ... on ... where a1.AA=aa and a2.AA=aa and ... limit X,X; \r\n\r\n结合例子运用多表多值分页查询：\r\n\r\n例：查询一个可无限增加查询条件的包含行列值的报表数据\r\n\r\n![图1](http://zhzdwk.com/report/1470642820/thumb/1470642820.png)\r\n\r\n\r\n\r\n\r\n\r\n期待后续的代码优化处理\r\n",
+  "body": "## 多表多值查询并分页\r\n\r\n在程序中，经常需要接触条件搜索分页内容，分享几个查询分页方法。 \r\n\r\n1. 单表单值分页查询：\r\n\r\nselect * from XXX where XX=xx limit X,X;\r\n\r\n2. 单表多值分页查询：\r\n\r\nselect * from XXX where AA=aa and BB=bb ... limit X,X;\r\n\r\n3. 多表多值分页查询：\r\n\r\nselect a1.* from XXX as a1 left join XXX as a2 on a1.XX=a2.XX left join ... on ... where a1.AA=aa and a2.AA=aa and ... limit X,X; \r\n\r\n结合例子运用多表多值分页查询：\r\n\r\n需求：可通过多项选择框和下拉选择框选择，筛选出符合的数据并分页列出。（PS：下拉选择框可选，即只选产别1就可以展示产别1的数据，当选择了产别3时无法对产别1内容筛选）\r\n\r\n![图1](http://zhzdwk.com/report/1470642820/thumb/1470642820.png)\r\n\r\n在例子查询中，存在3种查询方式，包括多项选择查询、下拉选择查询和2者结合查询。\r\n\r\n行（列）值数目不定，并可在其它页面添加行（列）值，所以在数据库中设计了两个表分别存放行列值信息（id,行列值name）,而产别数据则和查询表放一起，因为固定存在下拉选项，有且最多3项，所以数据库设计时用了4个字段保存产别（firstcat,secondcat,thirdcat,和最后所属产别bcatid），同时用产别表表示3级结构的上下关系（cid,upid,catname）\r\n\r\n\r\n\r\n\r\n\r\n期待后续的代码优化处理\r\n",
   "note": "Don't delete this file! It's used internally to help with page regeneration."
 }
