@@ -34,17 +34,25 @@
         <h2>
 <a id="多表多值查询并分页" class="anchor" href="#%E5%A4%9A%E8%A1%A8%E5%A4%9A%E5%80%BC%E6%9F%A5%E8%AF%A2%E5%B9%B6%E5%88%86%E9%A1%B5" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>多表多值查询并分页</h2>
 
-<p>在程序中，经常需要接触条件搜索分页内容，分享几个查询分页方法。 
-单表单值分页查询：
-select * from XXX where XX=xx limit X,X;
-单表多值分页查询：
-select * from XXX where AA=aa and BB=bb ... limit X,X;
-多表多值分页查询：
-select a1.* from XXX as a1 left join XXX as a2 on a1.XX=a2.XX left join ... on ... where a1.AA=aa and a2.AA=aa and ... limit X,X; </p>
+<p>在程序中，经常需要接触条件搜索分页内容，分享几个查询分页方法。 </p>
 
-<p>结合例子运用多表多值分页查询：
-例：查询一个可无限增加查询条件的包含行列值的报表数据
-<img src="http://zhzdwk.com/report/1470642820/thumb/1470642820.png" alt="图1"></p>
+<p>单表单值分页查询：</p>
+
+<p>select * from XXX where XX=xx limit X,X;</p>
+
+<p>单表多值分页查询：</p>
+
+<p>select * from XXX where AA=aa and BB=bb ... limit X,X;</p>
+
+<p>多表多值分页查询：</p>
+
+<p>select a1.* from XXX as a1 left join XXX as a2 on a1.XX=a2.XX left join ... on ... where a1.AA=aa and a2.AA=aa and ... limit X,X; </p>
+
+<p>结合例子运用多表多值分页查询：</p>
+
+<p>例：查询一个可无限增加查询条件的包含行列值的报表数据</p>
+
+<p><img src="http://zhzdwk.com/report/1470642820/thumb/1470642820.png" alt="图1"></p>
 
 <p>期待后续的代码优化处理</p>
       </section>
