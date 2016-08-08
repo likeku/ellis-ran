@@ -1,6 +1,6 @@
 {
   "name": "搜索-多表多值查询并分页",
   "tagline": "我的技术分享站-EllisRan",
-  "body": "# 多表多值查询并分页\r\n\r\n在程序中，经常需要接触条件搜索分页内容，分享几个查询分页方法。\r\n单表单值分页查询：\r\nselect * from XXX where XX=xx limit X,X;\r\n单表多值分页查询：\r\nselect * from XXX where AA=aa and BB=bb ... limit X,X;\r\n多表多值分页查询：\r\nselect a1.* from XXX as a1 left join XXX as a2 on a1.XX=a2.XX left join ... on ... where a1.AA=aa and a2.AA=aa and ... limit X,X; \r\n\r\n结合例子运用多表多值分页查询：\r\n例：查询一个可无限增加查询条件的包含行列值的报表数据\r\n![图1](http://zhzdwk.com/report/1470642820/thumb/1470642820.png)\r\n\r\n\r\n期待后续的代码优化处理\r\n",
+  "body": "## 多表多值查询并分页\r\n\r\n在程序中，经常需要接触条件搜索分页内容，分享几个查询分页方法。\r\n单表单值分页查询：\r\nselect * from XXX where XX=xx limit X,X;\r\n单表多值分页查询：\r\nselect * from XXX where AA=aa and BB=bb ... limit X,X;\r\n多表多值分页查询：\r\nselect a1.* from XXX as a1 left join XXX as a2 on a1.XX=a2.XX left join ... on ... where a1.AA=aa and a2.AA=aa and ... limit X,X; \r\n\r\n结合例子运用多表多值分页查询：\r\n例：查询一个可无限增加查询条件的包含行列值的报表数据\r\n![图1](http://zhzdwk.com/report/1470642820/thumb/1470642820.png)\r\n\r\n\r\n期待后续的代码优化处理\r\n",
   "note": "Don't delete this file! It's used internally to help with page regeneration."
 }
