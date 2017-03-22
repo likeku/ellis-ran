@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script src="jquery-1.9.1.min.js"></script>
+<script src="test.js"></script>
+<script>
+    $(function(){
+        var day = $.getDays('2017-03-25','2017-02-20');
+        console.log(day);
+        var daymsg = '2017-03-22';
+        var day2 = $.countDate(daymsg,-5);
+        console.log(day2);
+    })
+</script>
+</body>
+</html>
